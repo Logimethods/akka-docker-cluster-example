@@ -33,6 +33,7 @@ scalacOptions ++= Seq(
 )
 
 val akka = "2.3.7"
+val Kamon = "0.5.2"
 
 /* dependencies */
 libraryDependencies ++= Seq (
@@ -49,7 +50,10 @@ libraryDependencies ++= Seq (
   // -- json --
   ,"org.json4s" %% "json4s-jackson" % "3.2.10"
   // -- config --
-  ,"com.typesafe" % "config" % "1.2.0"
+  ,"com.typesafe" % "config" % "1.2.0",
+  "io.kamon"            %% "kamon-core"                         % Kamon,
+  "io.kamon"            %% "kamon-statsd"                       % Kamon,
+  "io.kamon"            %% "kamon-datadog"                      % Kamon
 )
 
 maintainer := "Michael Hamrah <m@hamrah.com>"
